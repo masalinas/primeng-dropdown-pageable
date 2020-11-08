@@ -1,0 +1,26 @@
+<form novalidate [formGroup]="userFormGroup" (ngSubmit)="onSubmit(userFormGroup.value)">   
+    <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-4">
+            <label for="firstName">Firstname</label>
+            <input id="firstName" type="text" pInputText formControlName="firstName"/>
+        </div>        
+        <br>
+        <div class="p-col-12 p-md-4">
+            <label for="lastName">Lastname</label>
+            <input id="lastName" type="text" pInputText formControlName="lastName"/>
+        </div>
+        <br>
+        <div class="p-col-12 p-md-4">
+            <label for="city">City</label>
+            <selector id="city" placeholder="Select a city" [totalRecords]="cities.length" [rowsPerPageOption]="rowsPerPageOption"
+                [options]="data" optionLabel="{{optionLabel}}" formControlName="city"
+                (onLazyLoad)="onLazyLoad($event)">    
+            </selector>
+        </div>
+        <br> 
+        <p-button label="Submit" type="submit"></p-button>
+    </div> 
+    
+    <br>
+    User: {{user | json}}
+</form>

@@ -1,0 +1,31 @@
+<!--<div class="p-grid p-fluid" [style]="{'width':'15rem'}">-->
+<div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-4">
+        <div class="p-inputgroup">
+            <input type="text" class="input-selector" pInputText placeholder="{{placeholder}}" (click)="_show = !_show"
+            [(ngModel)]="_selectedValue" readonly>
+            <button class="p-button-text p-button-secondary button-selector" pButton icon="pi pi-angle-down" (click)="_show = !_show"></button>
+        </div>
+    </div>
+
+    <div *ngIf="_show">
+        <div class="p-grid p-fluid">
+            <div class="panel-selector">
+                <div class="filter-selector">
+                    <span class="p-input-icon-right" >
+                        <i class="pi pi-search"></i><input type="text" pInputText [(ngModel)]="_filterData" (ngModelChange)="onChangeFilter($event)"/>
+                    </span>                
+                </div>                
+                <p-listbox [filter]="false" [options]="options" optionLabel="{{optionLabel}}"
+                    [listStyle]="{'max-height':'250px'}" [(ngModel)]="_selectedItem"
+                    (onClick)="onSelectClick($event)">
+                </p-listbox>
+                <div class="p-inputgroup">
+                    <button type="button" pButton class="p-button-text p-button-secondary previous-page" icon="pi pi-angle-left" (click)="onPreviousPage($event)"></button>
+                    <input type="text" class="pagination-selector" pInputText placeholder="Showing {{_activePage}} to {{_totalPages}} pages" readonly>
+                    <button type="button" pButton class="p-button-text p-button-secondary next-page" icon="pi pi-angle-right" (click)="onNextPage($event)"></button>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>

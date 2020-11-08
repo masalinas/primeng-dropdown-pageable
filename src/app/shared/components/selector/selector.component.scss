@@ -1,0 +1,56 @@
+:host ::ng-deep .button-selector.p-button {
+    border: 1px solid #ced4da; 
+    border-left: none;
+}
+
+:host ::ng-deep .button-selector.p-button:enabled:hover {
+    border-color: #ced4da
+}
+
+:host ::ng-deep .previous-page.p-button {
+    border: none;
+}
+
+:host ::ng-deep .previous-page.p-button:enabled:hover {
+    border-color: #2196F3;
+}
+
+:host ::ng-deep .input-selector.p-inputtext:enabled:hover {
+    border-color: #ced4da;
+}
+
+:host ::ng-deep .next-page.p-button {    
+    border: none;
+}
+
+:host ::ng-deep .next-page.p-button:enabled:hover {
+    border-color: #2196F3;
+}
+
+:host ::ng-deep .p-listbox {
+    border-left: none;
+    border-right: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px; 
+}
+
+.pagination-selector {
+    text-align: center;
+    border: none;
+}
+
+.input-selector {
+    border-right: none;
+}
+
+.filter-selector {
+    padding: 10px;
+}
+
+.panel-selector {
+    border: 1px solid #ced4da;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; 
+}
